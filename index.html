@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calido -Proyecto Final-</title>
+    <meta
+      name="description"
+      content="Cálido: fabricación de accesorios de diseño para mascotas. Variedad de objetos para gatos y perros"
+    />
+    <meta
+      name="keywords"
+      content="mascotas, perros, gatos, medalla, collar, bandana, accesorios, diseño"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/ProyectoFinal+Milesi/css/style.css"> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+
+  <body class="FondoPantallaMain">
+    <!--Header traído de mi proyecto de Desarrollo Web. Voy a reutilizar la misma web modificando la sección de Productos y agregando un carrito en el Header-->
+    <header class="container-fluid encabezado">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid d-flex">
+          <a class="navbar-brand contenedor_logo" href="#">
+            <img
+              class="logo_encabezado"
+              src="./assets/img/Logo Cálido Blanco SF.png"
+              alt="Logo Cálido"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 Nav_pages">
+              <li class="nav-item">
+                <a
+                  class="nav-link active linkNav"
+                  aria-current="page"
+                  href="#top"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkNav" href="#productosId">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkNav" href="#contactoID">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="carrito">
+            <a
+              id="botonCarrito"
+              data-bs-toggle="modal"
+              data-bs-target="#idModalCarrito"
+              class="btn carritoBtn p-2 rounded"
+              ><i class="fa-solid fa-cart-shopping carritoIcon"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main traído de proyecto de Desarrollo Web. Lo voy a usar como página de inicio, pero hacia abajo voy a armar el catálogo junto con otras herramientas. -->
+    <main class="container">
+      <div class="row">
+        <h1 class="título_main text-center m-2">
+          Cálido: Accesorios de diseño para mascotas
+        </h1>
+      </div>
+
+      <section class="row">
+        <div class="col-md-6 my-4 justify-content-center">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner shadow contenedorImagen">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/img/inicio/CALIDO PARANA (22).jpg"
+                  class="d-block w-100"
+                  alt="Imágen de producto 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/img/inicio/CALIDO PARANA (23).jpg"
+                  class="d-block w-100"
+                  alt="Imágen de producto 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/img/inicio/CALIDO PARANA (5).jpg"
+                  class="d-block w-100"
+                  alt="..Imágen de producto 3"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!--Texto de bienvenida-->
+
+        <div class="col-md-6 my-4 px-4 textoInicio">
+          <p>¡Bienvenidxs a nuestra página web!</p>
+          <p></p>
+          <p>
+            En este sitio podrán encontrar nuestro catálogo completo de
+            productos para mascotas. Para que puedas elegir desde tu casa el
+            mejor regalo.
+          </p>
+          <p>
+            Medallitas mascoteras, bandanas, juguetes, collares y correas son
+            algunos de los productos que elaboramos para quienes sienten la
+            necesidad y el deseo de cuidar y amar a sus mascotas.
+          </p>
+          <p>¡Estamos a su disposición para cualquier consulta!</p>
+        </div>
+      </section>
+
+      <!--Sección Productos-->
+      <div id="productosId" class="row">
+        <h2 class="título_main text-center m-2">Nuestros productos</h2>
+      </div>
+
+      <!--Medalla con Mas Info y botón comprar-->
+      <section class="row d-flex justify-content-center">
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-center">
+          <div class="tarjeta">
+            <h2 class="título_producto mt-1">Medallitas mascoteras</h2>
+            <div class="contenedorProducto">
+              <img
+                class="imagenProducto my-1"
+                src="./assets/img/Productos/CALIDO Medallitas.jpg"
+                alt="Medallitas identificadoras"
+              />
+            </div>
+
+            <p class="parrafoproducto">
+              <button
+                class="btn botón_producto m-1"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseProducto1"
+                aria-expanded="false"
+                aria-controls="collapseProducto1"
+              >
+                Mas info
+              </button>
+            </p>
+            <div class="collapse" id="collapseProducto1">
+              <div class="card card-body texto_producto">
+                <p>
+                  De polímero y estampadas en sublimación con diversos diseños
+                  para colocar en el collar de la mascota.
+                </p>
+                <p>
+                  Vienen en cuatro formas y tamaños diferentes: hueso grande,
+                  círculo, hueso chico, y pez, para perros/as grandes,
+                  medianos/as, pequeños/as y gatos/as respectivamente. Se
+                  realizan más de cuarenta diseños diferentes y cuenta con un
+                  espacio en blanco al frente para completar con el nombre de la
+                  mascota, y un espacio en blanco al dorso para colocar el
+                  teléfono del dueño/a. Están pensadas para la comercialización
+                  en pet shops, veterinarias y forrajerías por lo que cuentan
+                  con un empaquetado que ayuda a exhibir el producto y en el
+                  cual se encuentran las indicaciones de uso.
+                </p>
+                <p>
+                  Tamaños: para perros/as grandes (hueso grande), medianos/as
+                  (Hueso grande o círculo) y chicos/as (Hueso chico). Y además
+                  para gatos/as (Pez)
+                </p>
+              </div>
+              <a
+                id="medallasBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#idModalCompra"
+                class="btn btn-primary botón_comprar my-2"
+                >Comprar</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Bandana con Mas Info y botón comprar-->
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-evenly">
+          <div class="tarjeta">
+            <h2 class="título_producto mt-1">Bandanas o pañuelos</h2>
+            <div class="contenedorProducto">
+              <img
+                class="imagenProducto my-1"
+                src="./assets/img/Productos/CALIDO bandanas.jpg"
+                alt="Bandanas y pañuelos"
+              />
+            </div>
+
+            <p class="parrafoproducto">
+              <button
+                class="btn botón_producto m-1"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseProducto2"
+                aria-expanded="false"
+                aria-controls="collapseProducto2"
+              >
+                Mas info
+              </button>
+            </p>
+            <div class="collapse" id="collapseProducto2">
+              <div class="card card-body texto_producto">
+                <p>
+                  Las bandanas son pañuelos de tela para pasar por el collar de
+                  la mascota. Están estampados con los mismos diseños de las
+                  medallitas.
+                </p>
+                <p>
+                  Cuidados: Se puede sacar del collar y lavar en un lavarropas
+                  común y se debe evitar los tirones por parte de las mascotas.
+                </p>
+                <p>Tamaños: L, M y S.</p>
+              </div>
+
+              <button
+                id="bandanasBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#idModalCompra"
+                class="botón_comprar my-2"
+                type="submit"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Collar con Mas Info y botón comprar-->
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-evenly">
+          <div class="tarjeta">
+            <h2 class="título_producto mt-1">Collares</h2>
+            <div class="contenedorProducto">
+              <img
+                class="imagenProducto my-1"
+                src="./assets/img/Productos/CALIDO collares.jpg"
+                alt="Collares"
+              />
+            </div>
+
+            <p class="parrafoproducto">
+              <button
+                class="btn botón_producto m-1"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseProducto3"
+                aria-expanded="false"
+                aria-controls="collapseProducto3"
+              >
+                Mas info
+              </button>
+            </p>
+            <div class="collapse" id="collapseProducto3">
+              <div class="card card-body texto_producto">
+                <p>
+                  Confeccionados en polipropileno. Puede ir sólo o con bandanas
+                  y/o medallas identificatorias.
+                </p>
+                <p>Tamaños: 4 medidas distintas.</p>
+              </div>
+
+              <button
+                id="collaresBtn"
+                data-bs-toggle="modal"
+                data-bs-target="#idModalCompra"
+                class="botón_comprar my-2"
+                type="submit"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opción ver catálogo. Muestra el catálogo en tarjetas -->
+      <div class="row d-flex justify-content-between">
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-center">
+          <button id="verCatalogo" class="btn botonCatalogo">
+            Ver Catálogo
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-center">
+          <button id="ocultarCatalogo" class="btn botonCatalogo">
+            Ocultar Catálogo
+          </button>
+        </div>
+
+        <div class="col-md-4 col-sm-12 my-4 d-flex justify-content-center">
+          <a
+            id="agregarProductoBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#idModalProducto"
+            class="btn botonCatalogo my-2"
+            >Agregar producto al catálogo</a
+          >
+        </div>
+      </div>
+
+      <!-- Catálogo -->
+      <div class="container">
+        <div id="coincidencia"></div>
+        <div id="catalogoDiv" class="row"></div>
+      </div>
+
+      <!--Modal para agregar un producto al catálogo -->
+
+      <div
+        class="modal fade"
+        id="idModalProducto"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalFormato">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Ingrese el producto
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body modalFormato" id="modal-bodyProducto">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect0"
+                    >Seleccionar Tipo</label
+                  >
+                  <select class="form-control" id="tipoProductoInput">
+                    <option>Medalla</option>
+                    <option>Collar</option>
+                    <option>Bandana</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"
+                    >Seleccionar Modelo</label
+                  >
+                  <select class="form-control" id="modeloProductoInput">
+                    <option>Hueso grande</option>
+                    <option>Hueso pequeño</option>
+                    <option>Circulo</option>
+                    <option>Pez</option>
+                    <option>Collar grande</option>
+                    <option>Collar pequeño</option>
+                    <option>Bandana grande</option>
+                    <option>Bandana pequeña</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">Color</label>
+                  <select class="form-control" id="colorProductoInput">
+                    <option>Naranja</option>
+                    <option>Verde</option>
+                    <option>Celeste</option>
+                    <option>Rosa</option>
+                    <option>Amarillo</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer modalFormato">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn botonCatalogo"
+                id="botonAgregarAlCatálogo"
+              >
+                Agregar a catálogo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para CARRITO -->
+
+      <div
+        class="modal fade"
+        id="idModalCarrito"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Carrito de Compras
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body cardCarrito" id="modal-bodyCarrito">
+              <p>Productos</p>
+            </div>
+            <div class="row ml-ato text-center">
+              <p class="fw-bold fs-3" id="precioTotal"></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn botonCatalogo"
+                id="botonFinalizarCarrito"
+              >
+                Finalizar Compra
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal para crear un producto seleccionando las características y agregarlo al carrito -->
+
+      <div
+        class="modal fade"
+        id="idModalCompra"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalFormato">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Creá tu propio Producto
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body modalFormato" id="modal-bodyCompra">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect0"
+                    >Seleccionar Tipo</label
+                  >
+                  <select class="form-control" id="tipoProductoCreado">
+                    <option>Medalla</option>
+                    <option>Collar</option>
+                    <option>Bandana</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"
+                    >Seleccionar Modelo</label
+                  >
+                  <select class="form-control" id="modeloProductoCreado">
+                    <option>Hueso grande</option>
+                    <option>Hueso pequeño</option>
+                    <option>Circulo</option>
+                    <option>Pez</option>
+                    <option>Collar grande</option>
+                    <option>Collar pequeño</option>
+                    <option>Bandana grande</option>
+                    <option>Bandana pequeña</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">Color</label>
+                  <select class="form-control" id="colorProductoCreado">
+                    <option>Naranja</option>
+                    <option>Verde</option>
+                    <option>Celeste</option>
+                    <option>Rosa</option>
+                    <option>Amarillo</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer modalFormato">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn btn-success"
+                id="botonCarritoCrear"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER con CONTACTOS  -->
+
+    <footer class="container-fluid pt-1 PieDePagina" id="contactoID">
+      <a class="row">
+        <img
+          class="row LogoFooter mt-1"
+          src="./assets/img/Logo Cálido Blanco SF.png"
+          alt="Logo de Calido"
+        />
+      </a>
+
+      <div class="redesSociales row d-flex">
+        <div class="col-sm-12 col-md-3 d-flex justify-content-center">
+          <a
+            class="d-inline-flex ancla"
+            href="https://www.instagram.com/calidomascotas.ok/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram iconoRedes"></i
+          ></a>
+          <p>@calidomascotas.ok</p>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex justify-content-center">
+          <a
+            class="d-inline-flex ancla"
+            href="https://www.facebook.com/calidomascotas.ok"
+            target="_blank"
+            ><i class="fa-brands fa-square-facebook iconoRedes"></i
+          ></a>
+          <p class="d-inline-flex">/calidomascotas.ok</p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <a
+            class="d-inline-flex ancla"
+            href="https://wa.me/543434622121"
+            target="_blank"
+            ><i class="fa-brands fa-whatsapp iconoRedes"></i
+          ></a>
+          <p class="d-inline-flex">343-4622121</p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <i class="fa-solid fa-envelope-open iconoRedes"></i>
+          <p class="d-inline-flex">calido.objetos.ok@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="redesSociales row">
+        <p>
+          ©Calido: Accesorios de diseño para mascotas. <br />
+          -2023-
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Script Toastify -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Script Propio -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

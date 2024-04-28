@@ -1,0 +1,43 @@
+ [
+    {
+        "tipo": "Medalla",
+        "modelo": "Hueso grande",
+        "color": "naranja",
+        "precio": 300,
+        "id": 1,
+        "imagen":"MedallaImagen.jpg"
+    },
+    {
+        "tipo": "Medalla",
+        "modelo": "Pez",
+        "color": "verde",
+        "precio": 300,
+        "id": 2,
+        "imagen":"MedallaImagen.jpg"
+    },
+    {
+        "tipo": "Medalla",
+        "modelo": "Circulo",
+        "color": "azul",
+        "precio": 300,
+        "id": 3,
+        "imagen":"MedallaImagen.jpg"
+    },
+    {
+        "tipo": "Collar",
+        "modelo": "Grande",
+        "color": "naranja",
+        "precio": 500,
+        "id": 4,
+        "imagen":"CollarImagen.jpg"
+    },
+    {
+        "tipo": "Bandana",
+        "modelo": "Pequeña",
+        "color": "rosa",
+        "precio": 400,
+        "id": 5,
+        "imagen":"BandanaImagen.jpg"
+    }
+
+]
